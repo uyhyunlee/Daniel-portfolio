@@ -1,34 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import starIcon from './assets/star-icon.svg'
+import portraitImage from './assets/bp-portrait.png'
+import { useDrawer } from './contexts/DrawerContext'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const { openContactDrawer } = useDrawer();
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="app-container">
+      {/* Hero Section */}
+      <main className="hero-section">
+        <div className="hero-content">
+          <div className="hero-text">
+            <div className="hero-intro">
+              <h2>Hi I'm Daniel <img src={starIcon} alt="Star icon" className="star-icon" /></h2>
+            </div>
+            <div className="hero-tagline">
+              <h1>I love</h1>
+              <h1>to <span className="highlight">build</span></h1>
+            </div>
+          </div>
+          <div className="hero-image">
+            <img src={portraitImage} alt="Daniel's portrait" />
+          </div>
+        </div>
+        <div className="cta-container">
+          <button className="cta-button" onClick={openContactDrawer}>
+            build together?
+          </button>
+        </div>
+      </main>
+    </div>
   )
 }
 
