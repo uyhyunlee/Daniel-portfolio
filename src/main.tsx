@@ -4,6 +4,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './index.css'
 import App from './App.tsx'
 import About from './components/About.tsx'
+import Work from './components/Work.tsx'
+import ProjectDetail from './components/ProjectDetail.tsx'
 import Layout from './components/Layout.tsx'
 import { DrawerProvider } from './contexts/DrawerContext.tsx'
 
@@ -22,15 +24,11 @@ const router = createBrowserRouter([
       },
       {
         path: 'work',
-        element: <div style={{ 
-          display: 'flex', 
-          justifyContent: 'center', 
-          alignItems: 'center', 
-          height: '80vh',
-          fontSize: '2rem'
-        }}>
-          Work page coming soon...
-        </div>,
+        element: <Work />,
+      },
+      {
+        path: 'work/:projectId',
+        element: <ProjectDetail />,
       },
     ],
   },
