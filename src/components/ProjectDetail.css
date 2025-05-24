@@ -1,16 +1,217 @@
 .project-detail-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 2rem;
-  min-height: 70vh;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Header Section (Title + Role Combined) */
+.project-header-section {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.project-detail-container h1 {
-  font-size: 2.5rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
+.project-main-title {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Role Section */
+.project-role-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.project-star-icon {
+  width: 20px;
+  height: auto;
+}
+
+.project-role {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Cover Photo Section */
+.project-cover-section {
+  display: flex;
+  justify-content: center;
+}
+
+.project-cover-image {
+  width: 100%;
+  max-width: 960px;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* Project Overview Section (now includes links) */
+.project-overview-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 915px;
+  padding: 0 1.5rem;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.section-text {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+  color: #333;
+}
+
+/* Links Section (now inside overview) */
+.project-links-section {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.project-link {
+  padding: 0.75rem 1.5rem;
+  background-color: transparent;
+  border-radius: 10px;
+  border: 1px solid black;
+  color: black;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.project-link:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Role Description Section */
+.project-role-description-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 915px;
+  padding: 0 1.5rem;
+}
+
+/* Photos Section */
+.project-photos-section {
+  display: flex;
+  justify-content: center;
+}
+
+.photos-container {
+  display: flex;
+  gap: 3rem;
+  max-width: 960px;
+  width: 100%;
+  padding: 3.5rem;
+  background-color: rgba(107, 129, 251, 0.25);
+  border-radius: 20px;
+}
+
+.photo-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.photo-column-stack {
+  gap: 1.5rem;
+}
+
+.project-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* View More Work Section */
+.view-more-work-section {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.view-more-work-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #4B4B4B;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.view-more-work-link:hover {
+  opacity: 0.7;
+}
+
+.navigate-icon {
+  width: 12px;
+  height: auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .project-detail-container {
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+  
+  .project-main-title {
+    font-size: 32px;
+  }
+  
+  .project-role {
+    font-size: 18px;
+  }
+  
+  .section-title {
+    font-size: 20px;
+  }
+  
+  .section-text {
+    font-size: 16px;
+  }
+  
+  .project-overview-section,
+  .project-role-description-section {
+    padding: 0 1rem;
+  }
+  
+  .photos-container {
+    flex-direction: column;
+    padding: 2rem;
+  }
+  
+  .photo-column-stack {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  
+  .view-more-work-section {
+    justify-content: center;
+  }
+  
+  .project-links-section {
+    justify-content: center;
+  }
 } 
