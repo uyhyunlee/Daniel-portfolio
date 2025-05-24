@@ -150,6 +150,24 @@
   margin-top: 1rem;
 }
 
+/* Video Section */
+.project-video-section {
+  display: flex;
+  justify-content: center;
+}
+
+.video-container {
+  width: 100%;
+  max-width: 960px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.video-container iframe {
+  border-radius: 20px;
+}
+
 .view-more-work-link {
   display: flex;
   align-items: center;
@@ -205,6 +223,10 @@
   .photo-column-stack {
     flex-direction: row;
     gap: 1rem;
+  }
+  
+  .video-container iframe {
+    height: 315px;
   }
   
   .view-more-work-section {
