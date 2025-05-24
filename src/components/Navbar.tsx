@@ -1,5 +1,9 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useDrawer } from '../contexts/DrawerContext';
+import linkedinIcon from '../assets/linkedin-icon.svg';
+import githubIcon from '../assets/github-icon.svg';
+import mailIcon from '../assets/mail-icon.svg';
+import phoneIcon from '../assets/phone-icon.svg';
 import './Navbar.css';
 
 function Navbar() {
@@ -21,9 +25,45 @@ function Navbar() {
       <div className={`contact-drawer ${isContactDrawerOpen ? 'open' : ''}`}>
         <button className="close-drawer" onClick={toggleContactDrawer}>×</button>
         <div className="contact-content">
-          <h2>Let's Connect</h2>
-          <p>Send me a message and I'll get back to you soon.</p>
-          {/* Contact form or info would go here */}
+          <h2 className="contact-title">lets build!</h2>
+          <p className="contact-subtitle">
+            If you'd like to connect or have any questions, don't hesitate to reach out through the links below.
+          </p>
+          
+          <div className="contact-links">
+            <a 
+              href="https://www.linkedin.com/in/uhdlee/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="contact-link"
+            >
+              <img src={linkedinIcon} alt="LinkedIn" className="contact-icon" />
+              <span>/uhdlee</span>
+            </a>
+            
+            <a 
+              href="https://github.com/uyhyunlee" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="contact-link"
+            >
+              <img src={githubIcon} alt="GitHub" className="contact-icon" />
+              <span>/uyhyunlee</span>
+            </a>
+            
+            <a 
+              href="mailto:danieluhlee@gmail.com"
+              className="contact-link"
+            >
+              <img src={mailIcon} alt="Email" className="contact-icon" />
+              <span>danieluhlee@gmail.com</span>
+            </a>
+            
+            <div className="contact-link contact-link-inactive">
+              <img src={phoneIcon} alt="Phone" className="contact-icon" />
+              <span>(778) 779-0341</span>
+            </div>
+          </div>
         </div>
       </div>
 

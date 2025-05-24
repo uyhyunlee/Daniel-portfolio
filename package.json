@@ -1,13 +1,18 @@
 {
   "name": "daniel-portfolio",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "homepage": "https://daniellee.com",
+  "description": "Daniel Lee's personal portfolio showcasing software development projects and experience",
+  "keywords": ["portfolio", "react", "typescript", "software-developer"],
+  "author": "Daniel Lee",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build"
   },
   "dependencies": {
     "react": "^19.1.0",

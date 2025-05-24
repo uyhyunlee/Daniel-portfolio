@@ -60,6 +60,58 @@
 
 .contact-content {
   margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  color: black;
+}
+
+.contact-subtitle {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  color: #333;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  transition: opacity 0.3s ease;
+}
+
+.contact-link:hover {
+  opacity: 0.7;
+}
+
+.contact-link-inactive {
+  cursor: default;
+}
+
+.contact-link-inactive:hover {
+  opacity: 1;
+}
+
+.contact-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
 }
 
 /* Overlay */
