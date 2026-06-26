@@ -1,37 +1,45 @@
-import './App.css'
-import starIcon from './assets/star-icon.svg'
-import portraitImage from './assets/bp-portrait.png'
-import { useDrawer } from './contexts/DrawerContext'
+import { Link } from 'react-router-dom';
+import spawnFlower from './assets/figma/spawn-flower.svg';
+import blueprintCover from './assets/bp-cover.webp';
+import ProjectCard from './components/ProjectCard';
+import LogoIdeation from './components/LogoIdeation';
 
 function App() {
-  const { openContactDrawer } = useDrawer();
-
   return (
-    <div className="app-container">
-      {/* Hero Section */}
-      <main className="hero-section">
-        <div className="hero-content">
-          <div className="hero-text">
-            <div className="hero-intro">
-              <h2>Hi I'm Daniel <img src={starIcon} alt="Star icon" className="star-icon" /></h2>
-            </div>
-            <div className="hero-tagline">
-              <h1>I love</h1>
-              <h1>to <span className="highlight">build</span></h1>
-            </div>
-          </div>
-          <div className="hero-image">
-            <img src={portraitImage} alt="Daniel's portrait" />
-          </div>
+    <>
+      <section className="pt-[41px]">
+        <div className="mb-[18px] flex items-center justify-between">
+          <h2 className="m-0 text-xl font-normal">my favs</h2>
+          <Link to="/work" className="text-[15px] text-muted transition-colors hover:text-black">
+            See all
+          </Link>
         </div>
-        <div className="cta-container">
-          <button className="cta-button" onClick={openContactDrawer}>
-            build together?
-          </button>
+
+        <div className="mb-[41px] grid grid-cols-1 gap-[15px] md:grid-cols-2">
+          <ProjectCard
+            to="/work/spawn"
+            variant="spawn"
+            spawnFlower={spawnFlower}
+            label="Spawn"
+            year="2026"
+            caption="An app that helps you spontaneously make plans with friends!"
+          />
+          <ProjectCard
+            to="/work/blueprint"
+            image={blueprintCover}
+            imageAlt="BluePrint conference"
+            label="BluePrint"
+            year="2025"
+            caption="A networking conference where over 200+ students got their start in tech."
+          />
         </div>
-      </main>
-    </div>
-  )
+      </section>
+
+      <hr className="m-0 border-0 border-t border-border" />
+
+      <LogoIdeation />
+    </>
+  );
 }
 
-export default App
+export default App;

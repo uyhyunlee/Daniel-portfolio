@@ -7,7 +7,6 @@ import About from './components/About.tsx'
 import Work from './components/Work.tsx'
 import ProjectDetail from './components/ProjectDetail.tsx'
 import Layout from './components/Layout.tsx'
-import { DrawerProvider } from './contexts/DrawerContext.tsx'
 
 const router = createBrowserRouter([
   {
@@ -36,8 +35,6 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <DrawerProvider>
-      <RouterProvider router={router} />
-    </DrawerProvider>
+    <RouterProvider router={router} />
   </StrictMode>,
 )

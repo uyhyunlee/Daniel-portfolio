@@ -1,0 +1,10 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 61.8839 60.6037" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 13">
+<path id="Ellipse 5" d="M12 4C16.4183 4 20 7.58172 20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4Z" stroke="var(--stroke-0, black)" stroke-width="8"/>
+<g id="Group 11">
+<line id="Line 1" x1="35" y1="42" x2="35" y2="12" stroke="var(--stroke-0, black)" stroke-width="10"/>
+<line id="Line 3" x1="38" y1="37" x2="22" y2="37" stroke="var(--stroke-0, black)" stroke-width="10"/>
+</g>
+<path id="Line 10" d="M22 55.5266C33.8367 55.6145 51.7934 56.8408 57.3524 44.9209" stroke="var(--stroke-0, black)" stroke-width="10"/>
+</g>
+</svg>

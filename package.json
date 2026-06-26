@@ -5,7 +5,12 @@
   "type": "module",
   "homepage": "https://daniellee.com",
   "description": "Daniel Lee's personal portfolio showcasing software development projects and experience",
-  "keywords": ["portfolio", "react", "typescript", "software-developer"],
+  "keywords": [
+    "portfolio",
+    "react",
+    "typescript",
+    "software-developer"
+  ],
   "author": "Daniel Lee",
   "scripts": {
     "dev": "vite",
@@ -15,9 +20,11 @@
     "predeploy": "npm run build"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.3.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-router-dom": "^7.6.0"
+    "react-router-dom": "^7.6.0",
+    "tailwindcss": "^4.3.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
