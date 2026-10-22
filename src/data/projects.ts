@@ -105,8 +105,8 @@ export const projects: Record<string, Project> = {
     ],
     meta: {
       role: 'Co-founder',
-      timeline: 'May 2025 - Present',
-      skills: 'Product management, development',
+      timeline: 'Oct. 2024 - Aug. 2026',
+      skills: 'product management, coding, leadership',
       location: 'Vancouver, BC',
     },
     sections: [
@@ -163,9 +163,9 @@ export const projects: Record<string, Project> = {
       },
     ],
     meta: {
-      role: 'Co-director',
-      timeline: '2024 - 2025',
-      skills: 'Event production, partnerships, community',
+      role: 'Project manager',
+      timeline: 'May 2024 - May 2025',
+      skills: 'organization, speaking, management',
       location: 'Vancouver, BC',
     },
     sections: [
@@ -214,9 +214,9 @@ export const projects: Record<string, Project> = {
       },
     ],
     meta: {
-      role: 'Software Developer Intern',
-      timeline: '2025',
-      skills: 'Product development, software engineering',
+      role: 'Digital Product Manager Intern',
+      timeline: 'Sept. 2025 - Dec. 2025',
+      skills: 'product management, prioritization, user research',
       location: 'Toronto / Vancouver',
     },
     sections: [
@@ -264,9 +264,9 @@ export const projects: Record<string, Project> = {
       },
     ],
     meta: {
-      role: 'Software Developer',
-      timeline: '2025',
-      skills: 'Security software, development',
+      role: 'Software Engineer Intern',
+      timeline: 'Jan. 2025 - Aug. 2025',
+      skills: 'C#, Javascript, problem solving',
       location: 'Vancouver, BC',
     },
     sections: [
