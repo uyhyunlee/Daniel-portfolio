@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500&family=Onest:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500&family=Onest:wght@400;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -9,6 +9,7 @@
   --color-tab-active: #f1efef;
   --color-border: #e8e8e8;
   --color-spawn: #6b81fb;
+  --color-resume: #71afd4;
 }
 
 @layer base {

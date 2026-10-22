@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import danielLogo from '../assets/figma/daniel-logo.svg';
+import { RESUME_URL } from '../constants';
 
 const tabs = [
   { label: 'intro', path: '/' },
@@ -9,6 +10,8 @@ const tabs = [
 
 function Header() {
   const location = useLocation();
+  const isWorkSection = location.pathname.startsWith('/work');
+  const isAbout = location.pathname.startsWith('/about');
 
   const isActive = (path: string) => {
     if (path === '/') return location.pathname === '/';
@@ -17,13 +20,31 @@ function Header() {
 
   return (
     <header className="pt-8 md:pt-[52px]">
-      <div className="max-w-[491px]">
+      <div className="max-w-[500px]">
         <img src={danielLogo} alt="Daniel Lee logo" className="h-[31px] w-8" />
         <h1 className="mt-[65px] text-[28px] leading-none font-normal md:text-4xl">daniel lee</h1>
-        <p className="mt-[18px] text-sm leading-normal text-muted md:text-[15px]">
-          Building products to solve problems (and for fun)
-          <br />
-          Currently building Spawn, and previously at Scotiabank. Lets connect!
+        <p className="mt-[18px] min-h-[2.5em] text-sm leading-normal text-muted md:min-h-[2.625em] md:text-[15px]">
+          {isWorkSection ? (
+            <>
+              Building cool sh*t,{' '}
+              <a
+                href={RESUME_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-resume transition-colors hover:text-blue-600"
+              >
+                here&apos;s my resume
+              </a>
+            </>
+          ) : isAbout ? (
+            'A little bit about me...'
+          ) : (
+            <>
+              Building products to solve problems (and for fun)
+              <br />
+              Currently building Spawn, and previously at Scotiabank. Lets connect!
+            </>
+          )}
         </p>
       </div>
 

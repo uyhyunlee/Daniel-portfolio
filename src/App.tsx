@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import spawnFlower from './assets/figma/spawn-flower.svg';
 import blueprintCover from './assets/bp-cover.webp';
 import ProjectCard from './components/ProjectCard';
 import LogoIdeation from './components/LogoIdeation';
@@ -19,7 +18,6 @@ function App() {
           <ProjectCard
             to="/work/spawn"
             variant="spawn"
-            spawnFlower={spawnFlower}
             label="Spawn"
             year="2026"
             caption="An app that helps you spontaneously make plans with friends!"
